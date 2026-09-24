@@ -1,0 +1,1737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   NỀN WEBSITE
+============================== */
+
+body {
+    min-height: 100vh;
+
+    background: #f1f2f4;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ==============================
+   KHUNG ĐIỆN THOẠI
+============================== */
+
+.phone {
+    width: 445px;
+
+    height: 810px;
+
+    background: white;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   MÀN HÌNH / NỀN THIỆP
+============================== */
+
+.screen {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    text-align: center;
+
+    background: #f8f6ed;
+}
+.screen::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("images/background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 0.05;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+   NỘI DUNG THIỆP
+============================== */
+
+.wedding-content {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+
+/* ==============================
+   WEDDING INVITATION
+============================== */
+
+.wedding-title {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    line-height: 1.5;
+
+    color: #111;
+
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   ĐƯỜNG KẺ NHỎ
+============================== */
+.title-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    margin: 22px auto 25px;
+
+    gap: 10px;
+}
+
+.title-decoration span {
+    width: 85px;
+    height: 1px;
+
+    background: #a99a7d;
+}
+
+.title-decoration i {
+    font-size: 13px;
+
+    color: #a99a7d;
+
+    font-style: normal;
+}
+.title-decoration {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 22px auto 25px;
+}
+
+
+.title-decoration span {
+    width: 65px;
+
+    height: 1px;
+
+    background: #aaa;
+}
+
+
+.title-decoration i {
+    font-size: 8px;
+
+    color: #9a8560;
+
+    font-style: normal;
+}
+
+
+/* ==============================
+   TÊN CẶP ĐÔI
+============================== */
+
+.couple-name {
+    font-family: "Allura", cursive;
+
+    font-size: 42px;
+
+    font-weight: 430;
+
+    color: #222;
+
+    white-space: nowrap;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   ẢNH CẶP ĐÔI
+============================== */
+
+.couple-photo {
+    width: 310px;
+
+    height: 465px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        display: block;
+    }
+
+
+    .phone {
+        width: 100%;
+
+        height: 100vh;
+
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+
+    .screen {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    .couple-name {
+        font-size: 30px;
+    }
+
+
+    .couple-photo {
+        width: 75%;
+
+        height: auto;
+
+        aspect-ratio: 2 / 3;
+    }
+    .invitation-text {
+    font-size: 21px;
+
+    margin-top: 25px;
+    }
+
+
+    .bride-groom-name {
+        font-size: 50px;
+
+        margin-top: 20px;
+    }
+
+
+    .and-symbol {
+        font-size: 32px;
+
+        margin-top: 5px;
+    }
+
+
+    .couple-photo-container {
+        margin-top: 45px;
+    }
+
+
+    .person-button {
+        height: 34px;
+
+        padding: 0 11px;
+
+        gap: 7px;
+
+        font-size: 16px;
+
+        bottom: 12px;
+    }
+
+
+    .groom-button {
+        left: 20px;
+    }
+
+
+    .bride-button {
+        right: 20px;
+    }
+
+
+    .phone-icon {
+        font-size: 19px;
+    }
+    .guest-invitation {
+    padding-top: 60px;
+    }
+
+
+    .invitation-title {
+        font-size: 22px;
+    }
+
+
+    .guest-name {
+        font-size: 48px;
+
+        margin-top: 30px;
+    }
+
+
+    .invitation-message {
+        font-size: 17px;
+
+        line-height: 1.8;
+
+        margin-top: 35px;
+    }
+
+
+    .wedding-event {
+        width: 88%;
+
+        margin-top: 10px;
+
+        padding: 15px 15px 35px;
+
+        border-width: 5px;
+
+        border-radius: 50px;
+    }
+
+
+    .event-title {
+        font-size: 20px;
+    }
+
+
+    .event-time {
+        font-size: 21px;
+
+        margin-top: 25px;
+    }
+
+
+    .event-date {
+        font-size: 48px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .event-lunar {
+        font-size: 15px;
+
+        margin-top: 20px;
+    }
+
+
+    .event-place {
+        font-size: 20px;
+
+        margin-top: 22px;
+    }
+
+
+    .event-address {
+        font-size: 16px;
+    }
+
+
+    .map-button {
+        font-size: 17px;
+
+        min-width: 160px;
+    }
+    .wish-section {
+        width: 100%;
+        padding: 35px 20px 50px;
+        text-align: center;
+    }
+
+
+    .wish-title {
+        font-size: 23px;
+    }
+
+
+    .wish-form {
+        max-width: 100%;
+    }
+
+
+    .wish-name {
+        height: 45px;
+    }
+
+
+    .wish-name,
+    .wish-message {
+        font-size: 16px;
+    }
+
+
+    .wish-message {
+        min-height: 120px;
+    }
+
+
+    .wish-button {
+        width: 155px;
+
+        height: 42px;
+
+        font-size: 17px;
+    }
+    .gift-section {
+    margin-top: 55px;
+
+    padding-bottom: 50px;
+    }
+
+
+    .gift-title {
+        font-size: 23px;
+    }
+
+
+    .gift-message {
+        font-size: 15px;
+
+        padding: 0 20px;
+    }
+
+
+    .qr-container {
+        width: 230px;
+
+        padding: 18px 12px 22px;
+    }
+
+
+    .qr-code {
+        width: 175px;
+
+        height: 175px;
+    }
+
+
+    .qr-name {
+        font-size: 31px;
+    }
+    .attendance-section {
+    padding: 50px 15px 60px;
+    }
+
+    .attendance-title {
+        font-size: 23px;
+    }
+
+    .attendance-message {
+        font-size: 15px;
+    }
+
+    .attendance-form {
+        max-width: 100%;
+    }
+
+    .attendance-name,
+    .attendance-status,
+    .attendance-guests {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .attendance-button {
+        width: 175px;
+        height: 42px;
+        font-size: 16px;
+    }
+    .ending-overlay {
+    padding: 30px 15px;
+    }
+
+    .ending-decoration {
+        margin-bottom: 18px;
+    }
+
+    .ending-thank {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .ending-message {
+        margin-top: 18px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .ending-names {
+        gap: 7px;
+
+        margin-top: 25px;
+    }
+
+    .ending-name {
+        font-size: 40px;
+    }
+
+    .ending-and {
+        font-size: 25px;
+    }
+
+    .ending-date {
+        margin-top: 15px;
+
+        font-size: 16px;
+
+        letter-spacing: 2px;
+    }
+
+    .ending-heart {
+        margin-top: 18px;
+
+        font-size: 22px;
+    }
+}
+/* ==============================
+   THÔNG TIN HAI GIA ĐÌNH
+============================== */
+
+.family-info {
+    width: 92%;
+
+    margin: 45px auto 0;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+}
+
+
+/* MỖI BÊN GIA ĐÌNH */
+
+.family-side {
+    width: 47%;
+
+    text-align: center;
+}
+
+
+/* NHÀ TRAI / NHÀ GÁI */
+
+.family-title {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    margin-bottom: 22px;
+}
+
+
+/* TÊN BỐ MẸ */
+
+.family-line {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.8;
+}
+
+
+/* ĐỊA CHỈ */
+
+.family-address {
+    margin-top: 7px;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+/* ĐƯỜNG DỌC GIỮA */
+
+.family-divider {
+    width: 2px;
+
+    background: #222;
+
+    margin: 0 8px;
+}
+/* ==============================
+   ĐOẠN THÔNG BÁO
+============================== */
+
+.invitation-text {
+    margin-top: 35px;
+
+    padding: 0 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    color: #111;
+}
+
+
+/* ==============================
+   TÊN CÔ DÂU / CHÚ RỂ
+============================== */
+
+.bride-groom-name {
+    margin-top: 10px;
+
+    font-family: "Allura", cursive;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #111;
+}
+
+
+/* ==============================
+   DẤU &
+============================== */
+
+.and-symbol {
+    margin-top: 5px;
+
+    font-family: "Allura", cursive;
+
+    font-size: 38px;
+
+    color: #222;
+}
+
+
+/* ==============================
+   KHUNG HÌNH + BUTTON
+============================== */
+
+.couple-photo-container {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+/* HÌNH ẢNH */
+
+.couple-photo-bottom {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==============================
+   BUTTON GỌI
+============================== */
+
+.person-button {
+    position: absolute;
+
+    bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    height: 38px;
+
+    padding: 0 14px;
+
+    background: #5c8b4f;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* BUTTON CHÚ RỂ */
+
+.groom-button {
+    left: 35px;
+}
+
+
+/* BUTTON CÔ DÂU */
+
+.bride-button {
+    right: 35px;
+}
+
+
+/* ICON ĐIỆN THOẠI */
+
+.phone-icon {
+    font-size: 21px;
+
+    line-height: 1;
+}
+/* ==============================
+   PHẦN LỜI MỜI
+============================== */
+
+.guest-invitation {
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 55px;
+}
+
+
+/* TIÊU ĐỀ */
+
+.invitation-title {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #111;
+}
+
+
+/* TÊN KHÁCH */
+
+.guest-name {
+    margin-top: 20px;
+
+    font-family: "Allura", cursive;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #111;
+}
+
+
+/* LỜI MỜI */
+
+.invitation-message {
+    margin-top: 15px;
+
+    padding: 0 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    line-height: 1.9;
+
+    color: #111;
+}/* ==============================
+   KHUNG TIỆC
+============================== */
+
+.wedding-event {
+    position: relative;
+
+    width: 88%;
+
+    margin: 25px auto 0;
+
+    padding: 42px 20px 65px;
+
+    background: rgba(240, 245, 240, 0.75);
+
+    border: 6px solid #5c8b4f;
+
+    border-radius: 60px;
+
+    text-align: center;
+}
+
+
+/* TIỆC MỪNG LỄ VU QUY */
+
+.event-title {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #111;
+}
+
+
+/* GIỜ */
+
+.event-time {
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #111;
+}
+
+
+/* NGÀY */
+
+.event-date {
+    margin-top: 22px;
+
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    color: #000;
+}
+
+
+/* NGÀY ÂM */
+
+.event-lunar {
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #111;
+}
+
+
+/* ĐỊA ĐIỂM */
+
+.event-place {
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #111;
+}
+
+
+/* ĐỊA CHỈ */
+
+.event-address {
+    margin-top: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #111;
+}/* ==============================
+   NÚT CHỈ ĐƯỜNG
+============================== */
+
+.map-button {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -22px;
+
+    transform: translateX(-50%);
+
+    min-width: 180px;
+
+    padding: 8px 25px;
+
+    background: #5c8b4f;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.map-button:hover {
+    background: #4d7743;
+}
+/* ==============================
+   ALBUM ẢNH CƯỚI
+============================== */
+
+.photo-album {
+    width: 100%;
+
+    margin-top: 55px;
+
+    padding: 0 20px 40px;
+
+    text-align: center;
+}
+
+
+/* TIÊU ĐỀ ALBUM */
+
+.album-title {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #111;
+}
+
+
+/* ==============================
+   ĐƯỜNG TRANG TRÍ
+============================== */
+
+.album-decoration {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 200px;
+
+    margin: 20px auto 30px;
+}
+
+
+.album-decoration span {
+    width: 75px;
+
+    height: 1px;
+
+    background: #a99a7d;
+}
+
+
+.album-decoration i {
+    font-size: 9px;
+
+    color: #a99a7d;
+
+    font-style: normal;
+}
+
+
+/* ==============================
+   LƯỚI ẢNH
+============================== */
+
+.album-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* ẢNH */
+
+.album-grid img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* HIỆU ỨNG KHI DI CHUỘT */
+
+.album-grid img:hover {
+    transform: scale(1.02);
+}
+/* ==============================
+   PHẦN GỬI LỜI CHÚC
+============================== */
+
+.wish-section {
+    width: 100%;
+
+    padding: 5px 20px 40px;
+
+    text-align: center;
+}
+
+
+/* TIÊU ĐỀ */
+
+.wish-title {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #111;
+}
+
+
+/* ==============================
+   TRANG TRÍ
+============================== */
+
+.wish-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    margin: 12px auto 20px;
+}
+
+
+.wish-decoration span {
+    width: 75px;
+
+    height: 1px;
+
+    background: #a99a7d;
+}
+
+
+.wish-decoration i {
+    font-size: 9px;
+
+    color: #a99a7d;
+
+    font-style: normal;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+.wish-form {
+    width: 100%;
+
+    max-width: 380px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* Ô NHẬP */
+
+.wish-name,
+.wish-message {
+    width: 100%;
+
+    border: 1px solid #cfc8b8;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    color: #222;
+
+    outline: none;
+}
+
+
+/* TÊN */
+
+.wish-name {
+    height: 48px;
+
+    padding: 0 16px;
+}
+
+
+/* LỜI CHÚC */
+
+.wish-message {
+    min-height: 130px;
+
+    padding: 14px 16px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* PLACEHOLDER */
+
+.wish-name::placeholder,
+.wish-message::placeholder {
+    color: #999;
+}
+
+
+/* KHI BẤM VÀO */
+
+.wish-name:focus,
+.wish-message:focus {
+    border-color: #5c8b4f;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ==============================
+   NÚT GỬI
+============================== */
+
+.wish-button {
+    width: 170px;
+
+    height: 44px;
+
+    margin: 5px auto 0;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #5c8b4f;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.wish-button:hover {
+    background: #4d7743;
+}
+/* ==============================
+   PHẦN MỪNG CƯỚI
+============================== */
+
+.gift-section {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding-bottom: 45px;
+
+    text-align: center;
+}
+
+
+/* TIÊU ĐỀ */
+
+.gift-title {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #111;
+}
+
+
+/* ==============================
+   TRANG TRÍ
+============================== */
+
+.gift-decoration {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 200px;
+
+    margin: 15px auto 20px;
+}
+
+
+.gift-decoration span {
+    width: 75px;
+
+    height: 1px;
+
+    background: #a99a7d;
+}
+
+
+.gift-decoration i {
+    font-size: 9px;
+
+    color: #a99a7d;
+
+    font-style: normal;
+}
+
+
+/* ==============================
+   LỜI NHẮN
+============================== */
+
+.gift-message {
+    padding: 0 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+
+
+/* ==============================
+   KHUNG QR
+============================== */
+
+.qr-container {
+    width: 250px;
+
+    margin: 30px auto 0;
+
+    padding: 20px 15px 25px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid #d8d0c0;
+
+    border-radius: 15px;
+}
+
+
+/* QR */
+
+.qr-code {
+    width: 190px;
+
+    height: 190px;
+
+    display: block;
+
+    margin: 0 auto 18px;
+
+    object-fit: contain;
+}
+
+
+/* TÊN */
+
+.qr-name {
+    font-family: "Allura", cursive;
+
+    font-size: 34px;
+
+    color: #111;
+}
+
+
+/* NGÂN HÀNG */
+
+.qr-bank {
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+/* SỐ TÀI KHOẢN */
+
+.qr-account {
+    margin-top: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #222;
+}
+/* ==============================
+   XÁC NHẬN THAM DỰ
+============================== */
+
+.attendance-section {
+    width: 100%;
+    padding: 0px 20px 0px;
+    text-align: center;
+}
+
+.attendance-title {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.attendance-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 200px;
+
+    margin: 15px auto 20px;
+}
+
+.attendance-decoration span {
+    width: 75px;
+    height: 1px;
+    background: #a99a7d;
+}
+
+.attendance-decoration i {
+    font-size: 9px;
+    color: #a99a7d;
+    font-style: normal;
+}
+
+.attendance-message {
+    padding: 0 20px;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #333;
+}
+
+.attendance-form {
+    width: 100%;
+    max-width: 380px;
+
+    margin: 10px auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.attendance-name,
+.attendance-status,
+.attendance-guests {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 16px;
+
+    border: 1px solid #cfc8b8;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    color: #222;
+
+    outline: none;
+}
+
+.attendance-name::placeholder,
+.attendance-guests::placeholder {
+    color: #999;
+}
+
+.attendance-name:focus,
+.attendance-status:focus,
+.attendance-guests:focus {
+    border-color: #5c8b4f;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.attendance-button {
+    width: 190px;
+    height: 44px;
+
+    margin: 5px auto 0;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #5c8b4f;
+
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.attendance-button:hover {
+    background: #4d7743;
+}
+/* ==============================
+   ẢNH + NỘI DUNG PHẦN KẾT
+============================== */
+
+.ending-photo-container {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    overflow: hidden;
+}
+
+.ending-photo {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==============================
+   CHỮ NẰM TRÊN ẢNH
+============================== */
+
+.ending-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    color: white;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.15) 55%,
+        rgba(0, 0, 0, 0.45)
+    );
+}
+
+
+/* ==============================
+   TRANG TRÍ
+============================== */
+
+.ending-decoration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 200px;
+
+    margin: 0 auto 25px;
+}
+
+.ending-decoration span {
+    width: 75px;
+
+    height: 1px;
+
+    background: white;
+}
+
+.ending-decoration i {
+    font-size: 9px;
+
+    color: white;
+
+    font-style: normal;
+}
+
+
+/* ==============================
+   LỜI CẢM ƠN
+============================== */
+
+.ending-thank {
+    max-width: 700px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+
+/* ==============================
+   LỜI NHẮN
+============================== */
+
+.ending-message {
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: white;
+}
+
+
+/* ==============================
+   TÊN
+============================== */
+
+.ending-names {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    white-space: nowrap;
+}
+
+.ending-name {
+    font-family: "Allura", cursive;
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    color: white;
+}
+
+.ending-and {
+    font-family: "Allura", cursive;
+
+    font-size: 27px;
+
+    color: white;
+}
+
+
+/* ==============================
+   NGÀY
+============================== */
+
+.ending-date {
+    margin-top: 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: white;
+}
+
+
+/* ==============================
+   TIM
+============================== */
+
+.ending-heart {
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    color: white;
+}
